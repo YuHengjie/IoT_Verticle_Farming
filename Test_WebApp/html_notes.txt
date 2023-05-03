@@ -1,0 +1,76 @@
+The notes were obtained from https://www.w3schools.com/html/ and the internet.
+
+1. 
+const char saved_ok_html[] PROGMEM = R"rawliteral( 
+// HTML code // 
+)rawliteral";
+
+It tells the compiler "put this information into flash memory", instead of into SRAM, where it would normally go.
+
+2. 
+Basic element in html
+The <!DOCTYPE html> declaration defines that this document is an HTML5 document
+The <html> element is the root element of an HTML page
+The <head> element contains meta information about the HTML page
+The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+The <body> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+The <h1> element defines a large heading. <h1> defines the most important heading. <h6> defines the least important heading.
+The <p> element defines a paragraph
+
+3.
+Setting The Viewport
+HTML5 introduced a method to let web designers take control over the viewport, through the <meta> tag
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+4.
+The <link> element defines the relationship between the current document and an external resource.
+The <link> tag is most often used to link to external style sheets:
+href	URL	Specifies the location of the linked document
+Integrity attribute is to allow the browser to check the file source to ensure that the code is never loaded if the source has been manipulated.
+Crossorigin attribute is present when a request is loaded using 'CORS' which is now a requirement of SRI checking when not loaded from the 'same-origin'.
+
+5.
+The <title> element defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.
+
+
+6.
+The <style> element is used to define style information for a single HTML page:
+rem	Relative to font-size of the root element
+The margin property sets the margins for an element, 
+, and is a shorthand property for the following properties:
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+If the margin property has two values:
+margin: 10px 5px;
+top and bottom margins are 10px
+right and left margins are 5px
+
+7.
+get icon from https://fontawesome.com/search
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/3c7f5e0f61.js" crossorigin="anonymous"></script>
+replace 3c7f5e0f61 with your own personal Font Awesome CDN
+
+8.
+The setInterval() method calls a function at specified intervals (in milliseconds).
+The XMLHttpRequest object can be used to request data from a web server.
+
+A common JavaScript syntax for using it looks much like this:
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Action to be performed when the document is read;
+    }
+};
+xhttp.open("GET", "filename", true);
+xhttp.send();
+
+The getElementById() method is one of the most common methods in the HTML DOM. It is used almost every time you want to read or edit an HTML element.
+
+responseText	get the response data as a string
